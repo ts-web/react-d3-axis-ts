@@ -1,0 +1,35 @@
+{
+  "name": "react-d3-axis-ts",
+  "version": "0.0.0",
+  "author": "https://github.com/ts-web/",
+  "license": "ISC",
+  "main": "lib/Axis.js",
+  "description": "React port of d3-axis",
+  "keywords": [
+    "react",
+    "d3-axis"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ts-web/react-d3-axis-ts.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "devDependencies": {
+    "@types/d3": "^7",
+    "@types/d3-scale": "^4",
+    "@types/react": "^18",
+    "d3": "^7",
+    "d3-scale": "^4",
+    "react": "^18",
+    "typescript": "^5"
+  },
+  "files": [
+    "lib"
+  ]
+}
