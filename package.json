@@ -13,6 +13,7 @@
     "type": "git",
     "url": "https://github.com/ts-web/react-d3-axis-ts.git"
   },
+  "homepage": "https://ts-web.github.io/react-d3-axis-ts/",
   "scripts": {
     "prepack": "npm run build",
     "start": "start-storybook -p 6007",
