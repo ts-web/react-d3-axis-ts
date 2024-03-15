@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "rootDir": "./src",
+    "rootDir": "./src/app",
     "outDir": "lib",
     "baseUrl": ".",
     "esModuleInterop": true,
@@ -20,7 +20,7 @@
     "noImplicitOverride": true
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx"
+    "src/app/**/*.ts",
+    "src/app/**/*.tsx"
   ]
 }

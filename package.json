@@ -14,19 +14,46 @@
     "url": "https://github.com/ts-web/react-d3-axis-ts.git"
   },
   "scripts": {
+    "prepack": "npm run build",
+    "start": "start-storybook -p 6007",
+    "all": "FORCE_COLOR=1 run-p build chk test lint",
+    "clean": "rimraf lib",
     "build": "tsc",
-    "prepack": "npm run build"
+    "build-storybook": "build-storybook",
+    "chk": "FORCE_COLOR=1 run-p 'chk:*'",
+    "chk:tsc-stories": "tsc -p src/stories/tsconfig.json",
+    "lint": "eslint 'src/**/*' --format codeframe --report-unused-disable-directives",
+    "test": "echo noop",
+    "watch": "FORCE_COLOR=1 run-p 'watch:*'",
+    "watch:ts": "tsc -w --preserveWatchOutput",
+    "storybook": "start-storybook -p 6006"
   },
   "peerDependencies": {
     "react": "*"
   },
   "devDependencies": {
+    "@babel/core": "^7",
+    "@babel/preset-env": "^7",
+    "@babel/preset-react": "^7",
+    "@babel/preset-typescript": "^7",
+    "@storybook/addon-actions": "^6",
+    "@storybook/builder-webpack5": "^6",
+    "@storybook/manager-webpack5": "^6",
+    "@storybook/react": "^6",
     "@types/d3": "^7",
     "@types/d3-scale": "^4",
     "@types/react": "^18",
+    "@typescript-eslint/eslint-plugin": "^5",
+    "@typescript-eslint/parser": "^5",
+    "babel-loader": "^8",
     "d3": "^7",
     "d3-scale": "^4",
+    "eslint": "^8",
+    "eslint-formatter-codeframe": "^7",
+    "eslint-plugin-react-hooks": "^4",
     "react": "^18",
+    "react-dom": "^18",
+    "tsconfig-paths-webpack-plugin": "^4",
     "typescript": "^5"
   },
   "files": [
