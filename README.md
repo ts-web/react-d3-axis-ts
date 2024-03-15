@@ -1,5 +1,7 @@
 # react-d3-axis-ts
 
+<img src="axis.png" width="600">
+
 The d3 axis, with some improvements.
 - The style is configurable.
 - The path and lines are now centered on the axis and scale values and use `shape-rendering: crispEdges`.
