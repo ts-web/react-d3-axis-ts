@@ -1,3 +1,6 @@
+[![npm version](https://img.shields.io/npm/v/react-d3-axis-ts.svg)](https://www.npmjs.com/package/react-d3-axis-ts)
+[![Downloads](https://img.shields.io/npm/dm/react-d3-axis-ts.svg)](https://www.npmjs.com/package/react-d3-axis-ts)
+
 # react-d3-axis-ts
 
 <img src="axis.png" width="600">
