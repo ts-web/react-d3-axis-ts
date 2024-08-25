@@ -1,4 +1,4 @@
-// @ts-check
+// xx @ts-check
 
 import eslint from '@eslint/js';
 import stylisticTs from '@stylistic/eslint-plugin-ts';
