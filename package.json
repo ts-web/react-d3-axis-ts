@@ -1,6 +1,6 @@
 {
   "name": "react-d3-axis-ts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React replacement of d3-axis",
   "license": "MIT",
   "author": "https://github.com/ts-web/",
