@@ -19,10 +19,10 @@ function center <TVal> (
     (d: TVal): number;
     bandwidth: () => number;
     round: () => unknown;
-  }
+  },
 ) {
   let offset = Math.max(
-    0, scale.bandwidth() - 1
+    0, scale.bandwidth() - 1,
   ) / 2; // Adjust for 0.5px offset.
   if (scale.round()){
     offset = Math.round(offset);
@@ -127,7 +127,7 @@ export const Axis = <
   const range0 = +range[0];
   const range1 = +range[range.length - 1];
   const spacing = Math.max(
-    tickSizeInner, 0
+    tickSizeInner, 0,
   ) + tickPadding;
 
   const pathD = useMemo(
@@ -149,7 +149,7 @@ export const Axis = <
           `V${y0}`
         ;
       }
-    }, [posOrNeg, tickSizeOuter, range0, range1, isVert]
+    }, [posOrNeg, tickSizeOuter, range0, range1, isVert],
   );
 
   const tickTextStyle: CSSProperties = {
@@ -204,7 +204,7 @@ export const Axis = <
         fill="none"
       />
       {values.map((
-        val, i
+        val, i,
       ) => (
         <g key={i} opacity="1" transform={translate(position(val))}>
           <line

@@ -1,10 +1,10 @@
 {
   "name": "react-d3-axis-ts",
   "version": "1.0.3",
+  "description": "React replacement of d3-axis",
+  "license": "MIT",
   "author": "https://github.com/ts-web/",
-  "license": "ISC",
-  "main": "lib/Axis.js",
-  "description": "React port of d3-axis",
+  "funding": "https://github.com/sponsors/ts-web",
   "keywords": [
     "react",
     "d3-axis"
@@ -13,13 +13,16 @@
     "type": "git",
     "url": "https://github.com/ts-web/react-d3-axis-ts.git"
   },
-  "homepage": "https://ts-web.github.io/react-d3-axis-ts/",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
   "scripts": {
     "prepack": "npm run build",
     "start": "start-storybook -p 6007",
     "all": "FORCE_COLOR=1 run-p build chk test lint",
     "clean": "rimraf lib",
-    "build": "tsc",
+    "build": "tsup",
     "build-storybook": "build-storybook",
     "chk": "FORCE_COLOR=1 run-p 'chk:*'",
     "chk:tsc-stories": "tsc -p src/stories/tsconfig.json",
@@ -37,27 +40,32 @@
     "@babel/preset-env": "^7",
     "@babel/preset-react": "^7",
     "@babel/preset-typescript": "^7",
+    "@eslint/js": "^9.9.1",
     "@storybook/addon-actions": "^6",
     "@storybook/builder-webpack5": "^6",
     "@storybook/manager-webpack5": "^6",
     "@storybook/react": "^6",
+    "@stylistic/eslint-plugin": "^2.6.4",
     "@types/d3": "^7",
     "@types/d3-scale": "^4",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^22.5.0",
     "@types/react": "^18",
-    "@typescript-eslint/eslint-plugin": "^5",
-    "@typescript-eslint/parser": "^5",
     "babel-loader": "^8",
     "d3": "^7",
     "d3-scale": "^4",
-    "eslint": "^8",
-    "eslint-formatter-codeframe": "^7",
-    "eslint-plugin-react-hooks": "^4",
+    "eslint": "^9.9.1",
+    "eslint-formatter-codeframe": "^7.32.1",
+    "eslint-plugin-react-hooks": "5.1.0-rc-b57d2823-20240822",
+    "npm-run-all": "^4.1.5",
     "react": "^18",
     "react-dom": "^18",
     "tsconfig-paths-webpack-plugin": "^4",
-    "typescript": "^5"
+    "tsup": "^8.2.3",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.2.0"
   },
   "files": [
-    "lib"
+    "dist"
   ]
 }

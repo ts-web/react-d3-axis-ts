@@ -1,5 +1,7 @@
 [![npm version](https://img.shields.io/npm/v/react-d3-axis-ts.svg)](https://www.npmjs.com/package/react-d3-axis-ts)
 [![Downloads](https://img.shields.io/npm/dm/react-d3-axis-ts.svg)](https://www.npmjs.com/package/react-d3-axis-ts)
+![Uses TypeScript](https://img.shields.io/badge/Uses-Typescript-294E80.svg)
+
 
 # react-d3-axis-ts
 

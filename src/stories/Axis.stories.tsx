@@ -4,7 +4,7 @@ import { useEffect, useState, type PropsWithChildren, type CSSProperties } from 
 import { scaleLinear, scaleLog, scaleTime, scalePoint } from 'd3-scale';
 import * as d3 from 'd3';
 
-import { Axis } from '~/Axis';
+import { Axis } from '~/index';
 
 
 export default {
@@ -29,13 +29,13 @@ const Frame = ({children}: PropsWithChildren) => (
     <svg
       width={width}
       height={33}
-      viewBox={`0 0 ${width} 33`}
+      viewBox={`0 0 ${String(width)} 33`}
       style={{
         overflow: 'visible',
       }}
     >
       <g
-        transform={`translate(0,${0})`}
+        transform={`translate(0,0)`}
       >
         {children}
       </g>
@@ -52,12 +52,12 @@ function d3AxisBootstrap (
   const svg = d3.create('svg')
     .attr('width', width)
     .attr('height', 33)
-    .attr('viewBox', `0 0 ${width} 33`)
+    .attr('viewBox', `0 0 ${String(width)} 33`)
     .attr('style', 'overflow: visible')
   ;
   svg
     .append('g')
-    .attr('transform', `translate(0,${0})`)
+    .attr('transform', `translate(0,0)`)
     .call(axis)
   ;
   el.appendChild(svg.node()!);
@@ -74,7 +74,7 @@ const Fig1_Component = () => {
   useEffect(() => {
     d3AxisBootstrap(el, () =>
       d3.axisBottom(scale)
-        .ticks(2)
+        .ticks(2),
     );
   }, [el, scale]);
 
@@ -109,7 +109,7 @@ const Fig2_Component = () => {
   useEffect(() => {
     d3AxisBootstrap(el, () =>
       d3.axisBottom(scale)
-        .ticks(5)
+        .ticks(5),
     );
   }, [el, scale]);
 
@@ -141,7 +141,7 @@ const Fig3_Component = () => {
   useEffect(() => {
     d3AxisBootstrap(el, () =>
       d3.axisBottom(scale)
-        .ticks(10)
+        .ticks(10),
     );
   }, [el, scale]);
 
@@ -174,7 +174,7 @@ const Fig4_Component = () => {
   useEffect(() => {
     d3AxisBootstrap(el, () =>
       d3.axisBottom(scale)
-        .ticks(10, '+f')
+        .ticks(10, '+f'),
     );
   }, [el, scale]);
 
@@ -206,7 +206,7 @@ const Fig5_Component = () => {
   useEffect(() => {
     d3AxisBootstrap(el, () =>
       d3.axisBottom(scale)
-        .ticks(15, '+f')
+        .ticks(15, '+f'),
     );
   }, [el, scale]);
 
@@ -238,7 +238,7 @@ const Fig6_Component = () => {
   useEffect(() => {
     d3AxisBootstrap(el, () =>
       d3.axisBottom(scale)
-        .ticks(10, '$.2f')
+        .ticks(10, '$.2f'),
     );
   }, [el, scale]);
 
@@ -271,7 +271,7 @@ const Fig7_Component = () => {
   useEffect(() => {
     d3AxisBootstrap(el, () =>
       d3.axisBottom(scale)
-        .tickFormat(x => `(${(x as number).toFixed(1)})`)
+        .tickFormat(x => `(${(x as number).toFixed(1)})`),
     )
   }, [el, scale]);
 
@@ -304,7 +304,7 @@ const Fig8_Component = () => {
   useEffect(() => {
     d3AxisBootstrap(el, () =>
       d3.axisBottom(scale)
-        .ticks(2)
+        .ticks(2),
     );
   }, [el, scale]);
 
@@ -337,7 +337,7 @@ const Fig9_Component = () => {
   useEffect(() => {
     d3AxisBootstrap(el, () =>
       d3.axisBottom(scale)
-        .ticks(10)
+        .ticks(10),
     );
   }, [el, scale]);
 
@@ -371,7 +371,7 @@ const Fig10_Component = () => {
   useEffect(() => {
     d3AxisBootstrap(el, () =>
       d3.axisBottom(scale)
-        .ticks(5)
+        .ticks(5),
     );
   }, [el, scale]);
 
@@ -405,7 +405,7 @@ const Fig11_Component = () => {
   useEffect(() => {
     d3AxisBootstrap(el, () =>
       d3.axisBottom(scale)
-        .ticks(10)
+        .ticks(10),
     );
   }, [el, scale]);
 
@@ -439,7 +439,7 @@ const Fig12_Component = () => {
   useEffect(() => {
     d3AxisBootstrap(el, () =>
       d3.axisBottom(scale)
-        .ticks(20)
+        .ticks(20),
     );
   }, [el, scale]);
 
@@ -472,7 +472,7 @@ const Fig13_Component = () => {
   useEffect(() => {
     d3AxisBootstrap(el, () =>
       d3.axisBottom(scale)
-        .ticks(10, '~s')
+        .ticks(10, '~s'),
     );
   }, [el, scale]);
 
@@ -504,7 +504,7 @@ const Fig14_Component = () => {
   useEffect(() => {
     d3AxisBootstrap(el, () =>
       d3.axisBottom(scale)
-        .ticks(10)
+        .ticks(10),
     );
   }, [el, scale]);
 
@@ -536,7 +536,7 @@ const Fig15_Component = () => {
   useEffect(() => {
     d3AxisBootstrap(el, () =>
       d3.axisBottom(scale)
-        .ticks(d3.timeHour.every(3), '%I %p')
+        .ticks(d3.timeHour.every(3), '%I %p'),
     );
   }, [el, scale]);
 
@@ -569,7 +569,7 @@ const Fig16_Component = () => {
   useEffect(() => {
     d3AxisBootstrap(el, () =>
       d3.axisBottom(scale)
-        .tickValues([...'AEIOUY'])
+        .tickValues([...'AEIOUY']),
     );
   }, [el, scale]);
 
@@ -603,7 +603,7 @@ const Fig17_Component = () => {
   useEffect(() => {
     d3AxisBootstrap(el, () =>
       d3.axisBottom(scale)
-        .tickFormat(x => /[AEIOUY]/.test(x) ? x : '')
+        .tickFormat(x => /[AEIOUY]/.test(x) ? x : ''),
     );
   }, [el, scale]);
 
